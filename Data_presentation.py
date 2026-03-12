@@ -1,3 +1,10 @@
+#  1) Build a program that:
+# Displays a list of snacks and drinks with item numbers and prices. 
+# Ask the user to choose items by number in a loop.
+# Keeps track of selected items and their prices.
+# Ends when the user types "done".
+# Finally prints a receipt showing: List of selected items with prices and total cost
+
 # Menu of items
 menu = {
     1: ("Chips", 1.50),
@@ -46,6 +53,43 @@ for item, price in selected_items:
 print(f"Total: ${total_cost:.2f}")
 print("Thank you for your purchase!")
 
+
+
+Output:
+
+Welcome to the Snack and Drink Shop!
+Here is our menu:
+
+1. Chips - $1.50
+2. Chocolate Bar - $2.00
+3. Cookies - $1.60
+4. Soda - $1.25
+5. Water - $1.00
+6. Juice - $1.80
+
+Type the item number to add it to your order.
+Type "done" when finished.
+
+Enter item number (or 'done'): 1
+Added Chips - $1.50
+Enter item number (or 'done'): 4
+Added Soda - $1.25
+Enter item number (or 'done'): done
+
+--- Receipt ---
+Chips - $1.50
+Soda - $1.25
+Total: $2.75
+Thank you for your purchase!
+
+
+
+# 2) Write a program that:
+# Has a predefined dictionary of groceries with prices.
+# Lets the user "add" items by typing their names.
+# For each valid item, asks for the quantity.
+# Keeps adding to the cart until the user types "checkout".
+# Displays a final bill: each item, quantity, subtotal, and total.
 
 # Predefined grocery dictionary
 groceries = {
@@ -111,6 +155,42 @@ print(f"\nTotal: ${total:.2f}")
 print("Thank you for shopping!")
 
 
+Output:
+
+Welcome to the Grocery Store!
+
+Available items:
+
+- Apple: $0.99
+- Banana: $0.59
+- Milk: $3.49
+- Bread: $2.79
+- Eggs: $4.25
+- Rice: $5.99
+
+Type the item name to add it to your cart.
+Type "checkout" when you are finished.
+
+Enter item name (or 'checkout'): bread
+How many breads would you like? 1
+Added 1 x bread(s) to your cart.
+
+Enter item name (or 'checkout'): checkout
+
+--- Final Bill ---
+Bread (x1) - $2.79
+
+Total: $2.79
+Thank you for shopping!
+
+
+
+# 3) Build a to-do list manager that
+# Allows users to add tasks with priorities (e.g., "Buy milk - high").
+# Lets them view the current list, delete tasks by number, and mark tasks as complete.
+# Keeps looping until the user types "exit".
+# Shows a summary at the end: number of completed tasks vs pending.
+
 tasks = []
 
 while True:
@@ -168,6 +248,38 @@ print("\n--- SUMMARY ---")
 print(f"Completed tasks: {completed}")
 print(f"Pending tasks: {pending}")
 
+Output:
+--- TO‑DO LIST MANAGER ---
+1. Add task
+2. View tasks
+3. Delete task
+4. Mark task complete
+5. Exit
+Choose an option: 1 
+Enter task description: Add task
+Enter priority (high/medium/low): medium
+Task added!
+
+--- TO‑DO LIST MANAGER ---
+1. Add task
+2. View tasks
+3. Delete task
+4. Mark task complete
+5. Exit
+Choose an option: 5
+
+--- SUMMARY ---
+Completed tasks: 0
+Pending tasks: 1
+
+
+       
+# 4) Movie Ticket Booking Simulation
+# Simulate a movie theater booking system that:
+# Shows a list of available movie titles, showtimes, and seat prices.
+# Asks the user to choose a movie and number of tickets.
+# Confirms total price and asks if they want to book another movie.
+# Ends when they say "no" and displays total bookings and cost.
 
 movies = {
     "1": {"title": "Avengers", "time": "5:00 PM", "price": 12},
@@ -205,6 +317,27 @@ print("\n--- BOOKING SUMMARY ---")
 print(f"Total tickets booked: {total_tickets}")
 print(f"Total cost: ${total_cost}")
 
+Output:
+--- MOVIE LIST ---
+1. Avengers - 5:00 PM - $12
+2. Batman - 7:30 PM - $10
+3. Frozen - 3:00 PM - $8
+Choose a movie number: 2
+How many tickets? 3
+Total price: $30
+Book another movie? (yes/no): no
+
+--- BOOKING SUMMARY ---
+Total tickets booked: 3
+Total cost: $30
+
+
+# 5) Create a basic quiz game that:
+# Contains a list of 5–10 questions stored in a dictionary (or list of dictionaries [{}, {}] ).
+# Ask the user each question and records their answers.
+# At the end, displays:
+# The user's score (e.g., 7/10)
+# Correct answers for any questions they got wrong
 
 questions = {
     "What is the capital of France?": "Paris",
@@ -234,99 +367,7 @@ if wrong_answers:
     for q, ans in wrong_answers.items():
         print(f"{q} -> {ans}")
 
-
-
-
-
-Outputs:
-Welcome to the Snack and Drink Shop!
-Here is our menu:
-
-1. Chips - $1.50
-2. Chocolate Bar - $2.00
-3. Cookies - $1.60
-4. Soda - $1.25
-5. Water - $1.00
-6. Juice - $1.80
-
-Type the item number to add it to your order.
-Type "done" when finished.
-
-Enter item number (or 'done'): 1
-Added Chips - $1.50
-Enter item number (or 'done'): 4
-Added Soda - $1.25
-Enter item number (or 'done'): done
-
---- Receipt ---
-Chips - $1.50
-Soda - $1.25
-Total: $2.75
-Thank you for your purchase!
-Welcome to the Grocery Store!
-
-
-
-
-Available items:
-
-- Apple: $0.99
-- Banana: $0.59
-- Milk: $3.49
-- Bread: $2.79
-- Eggs: $4.25
-- Rice: $5.99
-
-Type the item name to add it to your cart.
-Type "checkout" when you are finished.
-
-Enter item name (or 'checkout'): bread
-How many breads would you like? 1
-Added 1 x bread(s) to your cart.
-
-Enter item name (or 'checkout'): checkout
-
---- Final Bill ---
-Bread (x1) - $2.79
-
-Total: $2.79
-Thank you for shopping!
-
---- TO‑DO LIST MANAGER ---
-1. Add task
-2. View tasks
-3. Delete task
-4. Mark task complete
-5. Exit
-Choose an option: 1 
-Enter task description: Add task
-Enter priority (high/medium/low): medium
-Task added!
-
---- TO‑DO LIST MANAGER ---
-1. Add task
-2. View tasks
-3. Delete task
-4. Mark task complete
-5. Exit
-Choose an option: 5
-
---- SUMMARY ---
-Completed tasks: 0
-Pending tasks: 1
-
---- MOVIE LIST ---
-1. Avengers - 5:00 PM - $12
-2. Batman - 7:30 PM - $10
-3. Frozen - 3:00 PM - $8
-Choose a movie number: 2
-How many tickets? 3
-Total price: $30
-Book another movie? (yes/no): no
-
---- BOOKING SUMMARY ---
-Total tickets booked: 3
-Total cost: $30
+Output:
 
 What is the capital of France?
 Your answer: Paris
@@ -345,4 +386,6 @@ Your answer: Carbon dioxide
 
 --- QUIZ RESULTS ---
 Your score: 5/5
+
+
 
